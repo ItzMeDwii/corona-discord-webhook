@@ -1,4 +1,4 @@
-<h1 align="center">Bald Guy Bot</h1>
+<h1 align="center">Corona Discord Webhook (Indonesia)</h1>
 <p align="center">
   <a href="#">
     <img alt="GitHub repo size" src="https://img.shields.io/github/repo-size/ItzMeDwii/corona-discord-webhook.svg">
@@ -13,7 +13,6 @@
     <img alt="Workflows" src="https://github.com/ItzMeDwii/corona-discord-webhook/workflows/Node.js%20CI/badge.svg">
   </a>
 </p>
-<p align="center"> Bald Guy is multi-purposes Bot made by Zealcord's team, with public contribution projects.</p>
 
 ### About
 ```
