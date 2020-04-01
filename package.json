@@ -1,0 +1,42 @@
+{
+  "name": "corona-discord-webhook",
+  "version": "1.0.0",
+  "description": "Daily Corona virus update untuk server kalian discord.",
+  "main": "index.js",
+  "scripts": {
+    "test": "eslint .",
+    "start": "node ."
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/ItzMeDwii/corona-discord-webhook.git"
+  },
+  "keywords": [
+    "covid19",
+    "discord-js",
+    "javascript"
+  ],
+  "author": "ItzMeDwii",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/ItzMeDwii/corona-discord-webhook/issues"
+  },
+  "homepage": "https://github.com/ItzMeDwii/corona-discord-webhook#readme",
+  "engines": {
+    "node": "12.x"
+  },
+  "dependencies": {
+    "discord.js": "^12.1.1",
+    "node-superfetch": "^0.1.10",
+    "moment": "^2.24.0",
+    "cron": "^1.8.2"
+  },
+  "devDependencies": {
+    "eslint": "^6.8.0"
+  },
+  "optionalDependencies": {
+    "utf-8-validate": "^5.0.2",
+    "zlib-sync": "^0.1.6",
+    "dotenv": "^8.2.0"
+  }
+}
