@@ -57,4 +57,4 @@ $ node .
 
 
 
-©️ 2020 **[DwiiUnknown](https://corona.dwii.me/)**
+©️ 2020 **[DwiiUnknown](https://corona.dwii.me/)** | ZealcordDevelopment
