@@ -1,4 +1,9 @@
 <h1 align="center">Corona Discord Webhook (Indonesia)</h1>
+<p align="center">
+  <a href='https://github.com/ItzMeDwii/corona-discord-webhook/workflows/'>
+    <img alt="Workflows" src="https://github.com/ItzMeDwii/corona-discord-webhook/workflows/Node.js%20CI/badge.svg">
+  </a>
+</p>
 
 ### About
 ```
