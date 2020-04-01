@@ -1,18 +1,4 @@
 <h1 align="center">Corona Discord Webhook (Indonesia)</h1>
-<p align="center">
-  <a href="#">
-    <img alt="GitHub repo size" src="https://img.shields.io/github/repo-size/ItzMeDwii/corona-discord-webhook.svg">
-  </a>
-  <a href='https://github.com/ItzMeDwii/corona-discord-webhook/blob/master/LICENSE.md'>
-    <img alt="GitHub" src="https://img.shields.io/github/license/ItzMeDwii/corona-discord-webhook.svg">
-  </a>
-  <a href='https://github.com/ItzMeDwii/corona-discord-webhook/blob/master/package.json'>
-    <img alt="GitHub package.json version" src="https://img.shields.io/github/package-json/v/ItzMeDwii/corona-discord-webhook.svg">
-  </a>
-  <a href='https://github.com/ItzMeDwii/corona-discord-webhook/workflows/'>
-    <img alt="Workflows" src="https://github.com/ItzMeDwii/corona-discord-webhook/workflows/Node.js%20CI/badge.svg">
-  </a>
-</p>
 
 ### About
 ```
