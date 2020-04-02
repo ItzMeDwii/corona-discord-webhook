@@ -34,7 +34,7 @@ var job = new CronJob(
       .setDescription("Statistik Provinsi 10 Teratas \n```" + arrey + "```")
       .addField(
         "Total",
-        `**Positif:** ${indo[0].positif} | **Sembuh:** ${indo[0].sembuh} | **Meninggal:** ${indo[0].positif}`
+        `**Positif:** ${indo[0].positif} | **Sembuh:** ${indo[0].sembuh} | **Meninggal:** ${indo[0].meninggal}`
       )
       .setFooter(
         "Last Updated: " +
