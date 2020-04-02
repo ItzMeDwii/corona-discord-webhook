@@ -8,6 +8,7 @@
 ### About
 ```
 Daily Webhook Corona virus update for your discord server. Updated every 06.00 GMT+7 and 18.00 GMT+7 (Asia/Jakarta)
+Using Nodejs v12, Discord.js v12.1.1, and CronJob.
 
 Data based on https://kawalcorona.com/api/
 ```
