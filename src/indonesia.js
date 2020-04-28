@@ -3,12 +3,14 @@ var moment = require("moment")
 var CronJob = require("cron").CronJob;
 var config = require("./config.json");
 
+console.log("Webhook Connected.");
+
 var job = new CronJob(
   "5 6,18 * * *",
   async function() {
     const { WebhookClient, MessageEmbed } = require("discord.js");
     const hook = new WebhookClient(config.webhookID, config.webhookToken);
-
+    
     let { body: corona } = await request.get(
       "https://api.kawalcorona.com/"
     );
@@ -45,7 +47,7 @@ var job = new CronJob(
       );
 
     hook.send(embed);
-    console.log("Done!");
+    console.log("Feed Delivery Success!");
   },
   null,
   true,
