@@ -12,15 +12,6 @@ Using Nodejs v12, Discord.js v12.2.0, and CronJob.
 
 Data based on https://github.com/mathdroid/indonesia-covid-19-api
 ```
-### Required Module/Package
-```
-discord.js@12.1.1,
-utf-8-validate@5.0.2,
-zlib-sync@0.1.6,
-cron@1.8.2,
-moment@2.24.0,
-node-superfetch@0.1.10
-```
 
 ### Installation
 Install the packages:
