@@ -2,10 +2,13 @@
   "name": "corona-discord-webhook",
   "version": "1.0.0",
   "description": "Daily Corona virus update untuk server kalian discord.",
-  "main": "index.js",
   "scripts": {
-    "test": "eslint .",
-    "start": "node ."
+    "start": "npm run compile && node dist/app.js",
+    "compile": "tsc",
+    "dev": "nodemon --exec \"npm start dev\"",
+    "lint": "eslint \"src/**/*.+(ts|js)\"",
+    "eslint-check": "eslint --print-config path/to/main.js | eslint-config-prettier-check",
+    "test": "npm run eslint-check && npm run compile && rimraf dist"
   },
   "repository": {
     "type": "git",
@@ -26,17 +29,48 @@
     "node": "12.x"
   },
   "dependencies": {
-    "discord.js": "^12.2.0",
-    "node-superfetch": "^0.1.10",
-    "moment": "^2.24.0",
-    "cron": "^1.8.2"
-  },
-  "devDependencies": {
-    "eslint": "^6.8.0"
+    "chalk": "^4.0.0",
+    "discord.js": "12.2.0",
+    "moment": "^2.25.1",
+    "cron": "^1.8.2",
+    "dotenv": "^8.2.0",
+    "superagent": "^5.2.2",
+    "@types/superagent": "^4.1.7"
   },
   "optionalDependencies": {
+    "bufferutil": "^4.0.1",
+    "libsodium-wrappers": "^0.7.6",
     "utf-8-validate": "^5.0.2",
-    "zlib-sync": "^0.1.6",
-    "dotenv": "^8.2.0"
+    "zlib-sync": "^0.1.6"
+  },
+  "devDependencies": {
+    "@types/cron": "^1.7.2",
+    "@types/node": "^13.13.4",
+    "@types/ws": "^7.2.4",
+    "@typescript-eslint/eslint-plugin": "^2.30.0",
+    "@typescript-eslint/parser": "^2.30.0",
+    "eslint": "^6.8.0",
+    "eslint-config-prettier": "^6.11.0",
+    "husky": "^4.2.5",
+    "lint-staged": "^10.2.2",
+    "nodemon": "^2.0.3",
+    "prettier": "^2.0.5",
+    "rimraf": "^3.0.2",
+    "typescript": "^3.8.3"
+  },
+  "husky": {
+    "hooks": {
+      "pre-commit": "lint-staged"
+    }
+  },
+  "lint-staged": {
+    "*.{js,css,json,md}": [
+      "prettier --write",
+      "git add"
+    ],
+    "*.js": [
+      "eslint --fix",
+      "git add"
+    ]
   }
 }
