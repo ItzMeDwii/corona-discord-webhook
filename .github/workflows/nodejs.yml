@@ -2,33 +2,26 @@ name: Node.js CI
 
 on:
   push:
-    branches:
-      - "**"
+    branches: [ master, typescript ]
   pull_request:
-    branches:
-      - "**"
+    branches: [ master, typescript ]
 
 jobs:
-  test:
+  build:
+
     runs-on: ubuntu-latest
+
     strategy:
       matrix:
         node-version: [12.x, 13.x, 14.x]
+
     steps:
-    - name: Checkout repository
-      uses: actions/checkout@v2
+    - uses: actions/checkout@v2
     - name: Use Node.js ${{ matrix.node-version }}
       uses: actions/setup-node@v1
       with:
         node-version: ${{ matrix.node-version }}
-    - name: Use npm cache if exists
-      uses: actions/cache@v1
-      with:
-        path: ~/.npm
-        key: ${{ runner.os }}-node-${{ hashFiles('**/package-lock.json') }}
-        restore-keys: |
-          ${{ runner.os }}-node-
-    - name: Install dependencies
-      run: npm ci
-    - name: Test code
-      run: npm test
+    - run: npm install --no-optional
+    - run: npm test
+      env:
+        CI: true
