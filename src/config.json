@@ -1,5 +1,5 @@
 {
-  "INFO": "Please be carefull, dont share or leak your WEBHOOK TOKEN.",
+  "INFO": "Please be carefull, dont share or leak your WEBHOOK ID & TOKEN.",
   "webhookID": "",
   "webhookToken": ""
 }
