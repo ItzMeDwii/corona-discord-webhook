@@ -1,5 +1,5 @@
 var request = require("node-superfetch");
-var moment = require("moment")
+var moment = require("moment");
 var CronJob = require("cron").CronJob;
 var config = require("./config.json");
 
@@ -11,14 +11,14 @@ var job = new CronJob(
     const { WebhookClient, MessageEmbed } = require("discord.js");
     const hook = new WebhookClient(config.webhookID, config.webhookToken);
     
-    let { body: indo } = await request.get(
+    const { body: indo } = await request.get(
       "https://indonesia-covid-19-api.now.sh/api"
     );
-    let { body: indoprov } = await request.get(
+    const { body: indoprov } = await request.get(
       "https://indonesia-covid-19-api.now.sh/api/provinsi"
     );
 
-  let arrey = indoprov.data
+  const arrey = indoprov.data
   .sort((a, b) => a.kasusPosi < b.kasusPosi)
   .slice(0, 10)
   .map(
