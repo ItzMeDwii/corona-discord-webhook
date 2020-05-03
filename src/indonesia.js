@@ -1,13 +1,13 @@
 var request = require("node-superfetch");
 var moment = require("moment");
-var CronJob = require("cron").CronJob;
+var { CronJob } = require("cron");
 var config = require("./config.json");
 
 console.log("Webhook Connected.");
 
 var job = new CronJob(
   "5 18 * * *",
-  async function() {
+  async () => {
     const { WebhookClient, MessageEmbed } = require("discord.js");
     const hook = new WebhookClient(config.webhookID, config.webhookToken);
     
