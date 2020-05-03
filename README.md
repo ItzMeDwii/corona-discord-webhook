@@ -1,4 +1,4 @@
-<h1 align="center">Corona Discord Webhook (Indonesia)</h1>
+<h1 align="center">Corona (COVID-19) Discord Webhook (Indonesia)</h1>
 <p align="center">
   <a href='https://github.com/ItzMeDwii/corona-discord-webhook/workflows/'>
     <img alt="Workflows" src="https://github.com/ItzMeDwii/corona-discord-webhook/workflows/Node.js%20CI/badge.svg">
@@ -36,7 +36,7 @@ Setup the webhook `./src/config.json`:
 ```
 Run the webhook:
 ```
-$ node .
+$ npm start
 ```
 
 ### Contributing
