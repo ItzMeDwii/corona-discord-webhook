@@ -1,5 +1,9 @@
 {
   "INFO": "Please be carefull, dont share or leak your WEBHOOK ID & TOKEN.",
+  "settings": {
+    "enableID": true,
+    "enableGlobal": false
+  },
   "webhook": [
     {
       "name": "",
