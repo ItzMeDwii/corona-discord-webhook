@@ -1,5 +1,10 @@
 {
   "INFO": "Please be carefull, dont share or leak your WEBHOOK ID & TOKEN.",
-  "webhookID": "",
-  "webhookToken": ""
+  "webhook": [
+    {
+      "name": "",
+      "webhookID": "",
+      "webhookToken": ""
+    }
+  ]
 }

@@ -101,7 +101,8 @@ dist
 
 #Lockfiles
 pnpm-lock.yaml
-
+package-lock.json
+yarn.lock
 
 # glitch
 .glitch-assets

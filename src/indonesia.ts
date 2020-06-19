@@ -6,9 +6,13 @@ import * as config from './config.json';
 
 console.log("Application Ready!");
 
-const job = new CronJob("5 18 * * *", async () => {
+const job = new CronJob("0 18 * * *", async () => {
   
-  const webhook = new WebhookClient(config.webhookID, config.webhookToken);
+  const webhooks = config.webhook;
+  
+  webhooks.forEach(async (item: any) => {
+  
+  const webhook = new WebhookClient(item.webhookID, item.webhookToken);
   
   const indonesia = await get("https://indonesia-covid-19-api.now.sh/api");
   const provinsi = await get("https://indonesia-covid-19-api.now.sh/api/provinsi");
@@ -41,8 +45,8 @@ const job = new CronJob("5 18 * * *", async () => {
   
   webhook.send(embed);
   
-  console.log("Message Delivery Success!", moment(Date.now()).format("LLLL"));
-  
+  console.log(`Message Delivery Success to ${item.name} !`, moment(Date.now()).format("LLLL"));
+  })
 }, null, true, "Asia/Jakarta");
 
 job.start();
