@@ -18,9 +18,10 @@ Install the packages:
 ```
 $ npm install
 ```
-Setup the webhook `./src/config.json`:
+Setup the webhook `./src/config.json` (support multiple webhook):
 ```
 {
+  "name": "",
   "webhookID": "",
   "webhookToken": ""
 }
