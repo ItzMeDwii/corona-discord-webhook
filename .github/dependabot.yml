@@ -4,6 +4,14 @@ updates:
   directory: "/"
   schedule:
     interval: daily
-    time: "11:00"
-  open-pull-requests-limit: 10
+    time: "06:00"
+    timezone: Asia/Jakarta
+  open-pull-requests-limit: 99
   target-branch: master
+  reviewers:
+  - ItzMeDwii
+  labels:
+  - dependencies
+  commit-message:
+    prefix: chore
+    include: scope
