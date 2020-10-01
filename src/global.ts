@@ -10,16 +10,16 @@ const job = new CronJob(
   "* * * * *",
   async () => {
     const webhooks = config.webhook.Global;
-    webhooks.forEach(async item => {
+    webhooks.forEach(async (item: any) => {
       const webhook = new WebhookClient(item.webhookID, item.webhookToken);
       const global = await get("https://covid19.mathdro.id/api");
       const countries = await get("https://covid19.mathdro.id/api/confirmed");
 
       const listCountry = countries.body.data
-        .sort((a, b) => a.confirmed < b.confirmed)
+        .sort((a: any, b: any) => a.confirmed < b.confirmed)
         .slice(0, 10)
         .map(
-          (item, i) =>
+          (item: any, i: any) =>
             `${i + 1}. ${item.countryRegion}: ${item.confirmed} Confirmed | ${
               item.recovered
             } Sembuh | ${item.deaths} Meninggal`
