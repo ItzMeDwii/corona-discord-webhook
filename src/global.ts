@@ -6,8 +6,7 @@ import * as config from "./config.json";
 
 console.log("Application Ready!");
 
-const job = new CronJob(
-  "* * * * *",
+const job = new CronJob("0 18 * * *",
   async () => {
     const webhooks = config.webhook.Global;
     webhooks.forEach(async (item: any) => {
