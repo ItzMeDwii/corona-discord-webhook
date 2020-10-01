@@ -15,7 +15,7 @@ const job = new CronJob(
       const global = await get("https://covid19.mathdro.id/api");
       const countries = await get("https://covid19.mathdro.id/api/confirmed");
 
-      const listCountry = countries.body.data
+      const listCountry = countries.body
         .sort((a: any, b: any) => a.confirmed < b.confirmed)
         .slice(0, 10)
         .map(
@@ -37,10 +37,10 @@ const job = new CronJob(
         )
         .addField(
           "Total " + global.confirmed.value + " kasus",
-          `**Positif:** ${global.confirmed.value -
-            global.recovered.value} | **Sembuh:** ${
-            global.recovered.value
-          } | **Meninggal:** ${global.deaths.value}`
+          `**Positif:** ${global.body.confirmed.value -
+            global.body.recovered.value} | **Sembuh:** ${
+            global.body.recovered.value
+          } | **Meninggal:** ${global.body.deaths.value}`
         )
         .setFooter("Menggunakan data dari John Hopkins University CSSE")
         .setTimestamp();
