@@ -38,9 +38,9 @@ const job = new CronJob(
         .addField(
           "Total " + global.confirmed.value + " kasus",
           `**Positif:** ${global.confirmed.value -
-            global.confirmed.recovered} | **Sembuh:** ${
-            global.confirmed.recovered
-          } | **Meninggal:** ${global.confirmed.deaths}`
+            global.recovered.value} | **Sembuh:** ${
+            global.recovered.value
+          } | **Meninggal:** ${global.deaths.value}`
         )
         .setFooter("Menggunakan data dari John Hopkins University CSSE")
         .setTimestamp();
