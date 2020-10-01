@@ -36,7 +36,7 @@ const job = new CronJob(
           "Statistik 10 Negara paling rawan \n```" + listCountry + "```"
         )
         .addField(
-          "Total " + global.confirmed.value + " kasus",
+          "Total " + global.body.confirmed.value + " kasus",
           `**Positif:** ${global.body.confirmed.value -
             global.body.recovered.value} | **Sembuh:** ${
             global.body.recovered.value
