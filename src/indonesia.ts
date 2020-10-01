@@ -8,7 +8,7 @@ console.log("Application Ready!");
 
 const job = new CronJob("0 18 * * *", async () => {
   
-  const webhooks = config.webhook;
+  const webhooks = config.webhook.ID;
   
   webhooks.forEach(async (item: any) => {
   
