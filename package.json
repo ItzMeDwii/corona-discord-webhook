@@ -34,7 +34,7 @@
     "moment": "^2.25.1",
     "cron": "^1.8.2",
     "dotenv": "^8.2.0",
-    "superagent": "^6.1.0"
+    "superagent": "^7.1.0"
   },
   "optionalDependencies": {
     "bufferutil": "^4.0.1",
